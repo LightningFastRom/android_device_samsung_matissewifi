@@ -25,7 +25,7 @@ $(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.
 #    libshim_imx175
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+# DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
 # $(call inherit-product, device/samsung/matisse-common/nfc/pn547/product.mk)
