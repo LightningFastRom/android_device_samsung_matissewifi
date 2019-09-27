@@ -13,25 +13,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common s3ve3g
-include device/samsung/s3ve3g-common/BoardConfigCommon.mk
+# inherit from common matisse
+include device/samsung/matisse-common/BoardConfigCommon.mk
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := matissewifi, matissewifiue, matissewi
+
+# BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 
 # Shims
-TARGET_LD_SHIM_LIBS += \
-        /system/vendor/lib/libmmcamera_imx175.so|libshim_imx175.so
+#TARGET_LD_SHIM_LIBS += \
+#        /system/vendor/lib/libmmcamera_imx175.so|libshim_imx175.so
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_s3ve3gxx_defconfig
+TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/s3ve3gxx/init/init_s3ve3g.cpp
+TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matissewifi/init/init_matisse.cpp
 
 # NFC
 # include $(COMMON_PATH)/nfc/pn547/board.mk
 
 # Radio/RIL
-include $(COMMON_PATH)/radio/single/board.mk
+# include $(COMMON_PATH)/radio/single/board.mk
 
 # inherit from the proprietary version
--include vendor/samsung/s3ve3gxx/BoardConfigVendor.mk
+-include vendor/samsung/matissewifi/BoardConfigVendor.mk

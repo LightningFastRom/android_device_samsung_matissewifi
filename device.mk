@@ -18,17 +18,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/s3ve3gxx/s3ve3gxx-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
 # Camera
-PRODUCT_PACKAGES += \
-    libshim_imx175
+# PRODUCT_PACKAGES += \
+#    libshim_imx175
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
-# $(call inherit-product, device/samsung/s3ve3g-common/nfc/pn547/product.mk)
+# $(call inherit-product, device/samsung/matisse-common/nfc/pn547/product.mk)
 
-# common s3ve3g
-$(call inherit-product, device/samsung/s3ve3g-common/s3ve3g.mk)
+# common matisse
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)
