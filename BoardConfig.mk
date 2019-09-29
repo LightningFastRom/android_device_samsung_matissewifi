@@ -23,7 +23,8 @@ TARGET_OTA_ASSERT_DEVICE := matissewifi, matissewifiue, matissewi
 TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
 
 # Radio
-BOARD_PROVIDES_LIBRIL := false
+BOARD_PROVIDES_LIBRIL := true
+TARGET_RIL_VARIANT := caf
 
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
