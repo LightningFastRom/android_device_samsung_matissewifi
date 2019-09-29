@@ -28,6 +28,9 @@ TARGET_OTA_ASSERT_DEVICE := matissewifi, matissewifiue, matissewi
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
 
+# Radio
+BOARD_PROVIDES_LIBRIL := false
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8226
 TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matissewifi/init/init_matissewifi.cpp
