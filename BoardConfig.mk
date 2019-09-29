@@ -19,21 +19,11 @@ include device/samsung/matisse-common/BoardConfigCommon.mk
 # Assert
 TARGET_OTA_ASSERT_DEVICE := matissewifi, matissewifiue, matissewi
 
-# BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
-
-# Shims
-#TARGET_LD_SHIM_LIBS += \
-#        /system/vendor/lib/libmmcamera_imx175.so|libshim_imx175.so
-
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
 
 # Radio
 BOARD_PROVIDES_LIBRIL := false
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matissewifi/init/init_matissewifi.cpp
 
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
