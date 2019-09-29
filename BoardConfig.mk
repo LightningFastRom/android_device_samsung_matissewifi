@@ -32,11 +32,5 @@ TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
 TARGET_INIT_VENDOR_LIB := libinit_msm8226
 TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matissewifi/init/init_matissewifi.cpp
 
-# NFC
-# include $(COMMON_PATH)/nfc/pn547/board.mk
-
-# Radio/RIL
-# include $(COMMON_PATH)/radio/single/board.mk
-
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
