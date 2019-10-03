@@ -29,3 +29,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # common matisse
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
+
+# opengapps
+$(call inherit-product, vendor/Gapps-Preloader/opengapps.mk)
