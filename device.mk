@@ -23,6 +23,10 @@ $(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Radio
+PRODUCT_PACKAGES += \
+    libsecnativefeature
+
 # common matisse
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
